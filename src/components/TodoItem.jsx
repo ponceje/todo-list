@@ -8,12 +8,7 @@ markList(event) {
     event.target.classList.toggle('checked');
 }
 removeItem = (event) => {
-    var x = document.getElementById(this.props.todo.id);
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+    this.props.removeItem(event.id);
 }
 
     render() {
