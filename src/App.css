@@ -14,14 +14,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url("cloudBG.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+}
+.buttonList{
+  background-color: tomato;
+}
+.title{
+  font-size: 80px;
+  color: #1187F7 ;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .App-link {

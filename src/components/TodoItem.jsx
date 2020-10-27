@@ -20,7 +20,7 @@ removeItem = (event) => {
         return (
             <div id={this.props.todo.id}> 
                 <li onClick={this.markList}> {this.props.todo.text} 
-                <input type="button" value="X" onClick={this.removeItem}/>
+                <input type="button" value="X" onClick={this.removeItem} class="buttonList"/>
                 </li>
             </div>
         );
