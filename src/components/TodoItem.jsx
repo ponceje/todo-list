@@ -24,7 +24,7 @@ removeItem = (todoid) => {
         return (
             <div id={this.props.todo.id}> 
                 <li onClick={this.markList}> {this.props.todo.text} 
-                <input type="button" value="X" onClick={()=> this.removeItem(this.props.todo.id)} class="buttonList"/>
+                <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
                 </li>
             </div>
         );
