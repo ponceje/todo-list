@@ -3,9 +3,9 @@ import TodoGenerator from "../components/TodoGenerator";
 import {toAddTodo} from "../actions";
 
 const mapDispatchToProps = (dispatch) =>({
-    toAddTodo: (text) => {dispatch(toAddTodo(text))}
+    toAddTodo: (todo) => {dispatch(toAddTodo(todo))}
 })
 
 const TodoGeneratorContainer = connect(null, mapDispatchToProps) (TodoGenerator)
 
-export default TodoGenerator;
+export default TodoGeneratorContainer;

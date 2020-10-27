@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import TodoGroup from './TodoGroup'
-import TodoGenerator from './TodoGenerator'
+import TodoGroupContainer from '../containers/TodoGroupContainer'
+import TodoGeneratorContainer from '../containers/TodoGeneratorContainer'
 
 
 class TodoList extends Component {
     render() {
         return (
             <div>
-                <TodoGroup />
-                <TodoGenerator />
+                <h1 id="application">TodoList</h1>
+                <TodoGroupContainer />
+                <TodoGeneratorContainer />
             </div>
         );
     }

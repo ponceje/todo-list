@@ -2,33 +2,29 @@ import React, { Component } from 'react';
 import { v4 as uuidv4} from 'uuid';
 
 class TodoGenerator extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state={
-            id: uuidv4(),
-            text : "",
-            done : false
-        }
-    }
     
+onSubmit = (event) => {
+    event.preventDefault();
+    const text = event.target.todoText.value;
+    const id = uuidv4();
+    const todo ={ id:id, text: text, done: false};
 
-    toAddTodo=(text)=>{
-        this.props.toAddTodo(this.state.text);
-    }
-
+    this.props.toAddTodo(todo);
+}
     render() {
-        const test = "test";
         return (
-            <div>
-                <input type="text" 
-                name="todo" 
-                id ="todo"
-                value = {this.state.text}
-                />
-                <input type="button" 
-                value="Add"
-                onClick = {this.toAddTodo}/>
+            <div id="toDoGenerator">
+                <form onSubmit={this.onSubmit}>
+                    <span>
+                         <input type="text" 
+                         name="todoText" 
+                         id ="todoText"
+                         />
+                         <input type="submit" 
+                         value="Add"
+                         />
+                    </span> 
+                </form>
             </div>
         );
     }
