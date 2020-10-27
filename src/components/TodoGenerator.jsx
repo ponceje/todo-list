@@ -32,7 +32,7 @@ onSubmit = (event) => {
                          />
                          <input type="submit" 
                          value="Add"
-                         />
+                         class="button"/>
                     </span> 
                 </form>
             </div>
