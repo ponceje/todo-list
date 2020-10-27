@@ -22,6 +22,6 @@ class TodoGroup extends Component {
             </div>
         );
     }
-}
+}    
 
 export default TodoGroup;
