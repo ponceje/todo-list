@@ -10,4 +10,6 @@ const todos = (state = [], action) => {
 
 
 
-export default combineReducers({todos});
+export default combineReducers({
+    todos
+});

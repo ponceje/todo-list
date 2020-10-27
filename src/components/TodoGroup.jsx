@@ -8,7 +8,9 @@ class TodoGroup extends Component {
         )) 
         return (
             <div>
-                {todos}
+                <ul>
+                  {todos}
+                </ul>
             </div>
         );
     }

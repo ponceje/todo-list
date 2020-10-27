@@ -1,9 +1,9 @@
 import {connect} from "react-redux";
 import TodoItem from "../components/TodoItem";
-import {deleteTodo} from "../actions";
+import {removeFromList} from "../actions";
 
 const mapDispatchToProps = dispatch => ({
-    deleteTodo:(id) => {dispatch(deleteTodo(id))}
+    removeFromList:(id) => {dispatch(removeFromList(id))}
 });
 
 const TodoItemContainer = connect(null, mapDispatchToProps)(TodoItem);
