@@ -7,6 +7,7 @@ import {connect} from 'react-redux' ;
 import React, { Component } from 'react';
 import { getTodos } from './apis/todos';
 import {initTodos} from "./actions";
+import errorFile from './components/errorFile';
 
 class App extends Component {
 
@@ -28,9 +29,10 @@ class App extends Component {
                 <li class ="inline"><Link to="/"> go main page</Link></li>
             </ul>
             <Switch>
-              <Route  path="/list" component={TodoGroupContainer}></Route>
-              <Route  path="/done" component={TodoDoneGroupContainer}></Route>
-              <Route  path="/" component={TodoList}></Route>
+              <Route exact path="/" component={TodoList}></Route>
+              <Route exact path="/list" component={TodoGroupContainer}></Route>
+              <Route exact path="/done" component={TodoDoneGroupContainer}></Route>
+              <Route exact path="/*" component={errorFile}></Route>
             </Switch>
           </BrowserRouter>
         </header>
