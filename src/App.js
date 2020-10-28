@@ -21,12 +21,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <BrowserRouter>
         <header className="App-header">
-          <BrowserRouter>
             <ul class ="linkList">
-                <li class ="inline"><Link to="/list"> go to list page</Link></li>
-                <li class ="inline"><Link to="/done"> go to done page</Link></li>
-                <li class ="inline"><Link to="/"> go main page</Link></li>
+                <li class ="inline"><Link class="link" to="/list" style={{ textDecoration: 'none' }}>TODO LIST</Link></li>
+                <li class ="inline"><Link class="link" to="/done" style={{ textDecoration: 'none' }}>DONE LIST</Link></li>
+                <li class ="inline"><Link class="link" to="/" style={{ textDecoration: 'none' }}>MAIN</Link></li>
             </ul>
             <Switch>
               <Route exact path="/" component={TodoList}></Route>
@@ -34,8 +34,8 @@ class App extends Component {
               <Route exact path="/done" component={TodoDoneGroupContainer}></Route>
               <Route exact path="/*" component={errorFile}></Route>
             </Switch>
+          </header>
           </BrowserRouter>
-        </header>
       </div>
     );
   }

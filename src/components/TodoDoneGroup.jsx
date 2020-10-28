@@ -16,7 +16,7 @@ class TodoDoneGroup extends Component {
         ))
         return (
             <div>
-                <ul>
+                <ul class="todoDoneGroup">
                   {todos}
                 </ul>
             </div>

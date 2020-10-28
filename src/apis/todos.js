@@ -14,4 +14,3 @@ export const removeFromList = (id) => {
 
 export const updateTodos = ({id, done}) => 
     api.put('/api/todos/' + id, {done: !done})
-    debugger;

@@ -12,9 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body{
+  background-image: url("cloudBG.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .App-header {
-  background-image: url("cloudBG.jpg");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,10 +28,7 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
-.buttonList{
-  background-color: tomato;
 
-}
 .title{
   font-size: 80px;
   color: #1187F7 ;
@@ -43,16 +45,7 @@
   box-sizing: border-box;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  opacity: .2px;
-  border-radius: 50px;
-}
-
-ul li {
+ul.todoDoneGroup li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;
@@ -65,7 +58,20 @@ ul li {
   border-radius: 25px;
 }
 
-ul li:hover {
+ul.todoGroup li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  position: relative;
+  border-radius: 25px;
+}
+
+ul.todoDoneGroup li:hover {
   background-color: #eee;
 }
 ul.todoGroup li.checked{
@@ -90,50 +96,35 @@ input[type=text] {
   border-bottom: 2px solid blue;
 }
 
-.button {
-  position: relative;
-  background-color: blue;
-  border: none;
-  font-size: 28px;
-  color: #FFFFFF;
-  padding: 20px;
-  width: 200px;
-  text-align: center;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.button:after {
-  content: "";
-  background: blue;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
 ul.linkList{
   list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  color: white;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li.inline{
+  padding: 20px;
+  float: left;
+}
+li Link {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-li.inline{
-  display: inline;
+.link {
+  color: #FFF;
+}
+
+.active {
+  background-color: #4CAF50;
 }
 
 .close:hover {background: #bbb;}
