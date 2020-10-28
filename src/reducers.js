@@ -2,7 +2,10 @@ import { combineReducers } from 'redux';
 
 const todos = (state = [], action) => {
 
-    if (action.type === "ADD_TO_DO_LIST"){
+    if(action.type === "INIT_TODO"){
+        return action.payload;
+    }
+    else if (action.type === "ADD_TO_DO_LIST"){
         return [...state, action.payload];
     }
     else if (action.type === "DELETE_TO_DO"){
@@ -12,9 +15,6 @@ const todos = (state = [], action) => {
     }
     return state;
 }
-
-
-
 export default combineReducers({
     todos
 });

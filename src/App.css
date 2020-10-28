@@ -125,6 +125,16 @@ input[type=text] {
   transition: 0s
 }
 
+ul.linkList{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.inline{
+  display: inline;
+}
+
 .close:hover {background: #bbb;}
 @keyframes App-logo-spin {
   from {
