@@ -56,6 +56,7 @@ ul.todoDoneGroup li {
   display: block;
   position: relative;
   border-radius: 25px;
+  margin: 0 0 3px 0;
 }
 
 ul.todoGroup li {
@@ -69,6 +70,7 @@ ul.todoGroup li {
   display: block;
   position: relative;
   border-radius: 25px;
+  margin: 0 0 3px 0;
 }
 
 ul.todoDoneGroup li:hover {
@@ -85,6 +87,7 @@ ul.todoGroup li.checked{
   right: 0%;
   padding: 12px 16px;
   transform: translate(0%, -50%);
+  border-radius: 25px;
 }
 
 input[type=text] {
@@ -121,6 +124,26 @@ li Link {
 
 .link {
   color: #FFF;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 .active {

@@ -4,7 +4,8 @@ import { v4 as uuidv4} from 'uuid';
 import swordSound from '../sword-sound.mp3';
 import heyhey from '../heyhey.mp3';
 import { addTodos } from '../apis/todos';
-import { Button } from 'antd';
+import { Button,Tooltip } from 'antd';
+import { PlusCircleOutlined } from '@ant-design/icons';
 
 class TodoGenerator extends Component {
     
@@ -35,9 +36,13 @@ onSubmit=(event)=>{
                          name="todoText" 
                          id ="todoText"
                          required/>
-                         <Button type="primary" htmlType="submit">
-                            Primary
-                        </Button>
+                         
+                         <Button class="plus-todo" 
+                         shape="circle" 
+                         htmlType="submit" 
+                         ghost="true" 
+                         size="large" 
+                         icon={<PlusCircleOutlined />}/>
                     </span> 
                 </form>
             </div>
