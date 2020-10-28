@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { unmountComponentAtNode, render } from "react-dom";
+import { unmountComponentAtNode} from "react-dom";
 import TodoItemContainer from '../containers/TodoItemContainer';
 
 

@@ -7,7 +7,7 @@ const todos = (state = [], action) => {
     }
     else if (action.type === "DELETE_TO_DO"){
         const list = [...state];
-        state =  list.filter(item => item.id != action.payload)
+        state =  list.filter(item => item.id !== action.payload)
         return state;
     }
     return state;
