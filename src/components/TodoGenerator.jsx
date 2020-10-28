@@ -17,8 +17,12 @@ constructor(props) {
 }
 
 onSubmit=(event)=>{
+    const beep = new Audio(swordSound);
+    const heya = new Audio(heyhey);
     event.preventDefault();
+    beep.play();
     addTodos(event.target.todoText.value).then(response=>{
+        if(response.data.text === "cloud"){heya.play();}
         this.props.addTodos(response.data);
         this.setState({
             text: ''
