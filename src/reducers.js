@@ -5,6 +5,10 @@ const todos = (state = [], action) => {
     if(action.type === "INIT_TODO"){
         return action.payload;
     }
+    else if(action.type === "TOGGLE_TODO"){
+        return state.map(todo => 
+            todo.id === action.payload ? {...todo, done: !todo.done} : todo)
+    }
     else if (action.type === "ADD_TO_DO_LIST"){
         return [...state, action.payload];
     }

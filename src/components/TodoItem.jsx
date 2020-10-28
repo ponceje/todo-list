@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { removeFromList } from '../apis/todos';
+import { updateTodos } from '../apis/todos';
 
 
 class TodoItem extends Component {
-markList(event) {
+
+markList = (event) => {
     event.target.classList.toggle('checked');
-    this.props.todo.done = "true";
+    updateTodos(this.props.todo).then(response=>{
+        this.props.updateTodos(response.data.id);
+        
+
+    })
+
+
 }
 removeItem = (todoid) => {
     removeFromList(todoid).then(response=>{
@@ -16,8 +24,8 @@ removeItem = (todoid) => {
     render() {
         return (
             <div id={this.props.todo.id}> 
-                <li>
-                    <label onClick={this.markList}>{this.props.todo.text}</label>
+                <li onClick={this.markList}  class={this.props.todo.done == true ? "checked" : "unchecked"}>
+                 {this.props.todo.text}
                     <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
                 </li>
             </div>

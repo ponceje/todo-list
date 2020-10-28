@@ -10,3 +10,8 @@ export const initTodos = todos =>({
     type:"INIT_TODO",
     payload: todos
 })
+
+ export const updateTodos = (id, done) => ({
+     type: "TOGGLE_TODO",
+     payload: id, done
+ })

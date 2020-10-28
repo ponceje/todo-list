@@ -13,7 +13,7 @@ class TodoGroup extends Component {
     render() {
         const todos = this.props.todos.map((todo)=> (
             <TodoItemContainer key={todo.id} todo={todo} />
-        )) 
+        ))
         return (
             <div>
                 <ul>
