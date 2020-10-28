@@ -17,7 +17,6 @@ class TodoDoneGroup extends Component {
         return (
             <div>
             <div>
-                <h1 id="application" class="title">TODO LIST</h1>  
                 <h1 id="application" class="title">DONE LIST</h1>
                 <ul class="todoDoneGroup">
                   {todos}
