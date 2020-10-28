@@ -4,19 +4,19 @@ import TodoItemContainer from '../containers/TodoItemContainer';
 
 
 
-class TodoGroup extends Component {
+class TodoDoneGroup extends Component {
 
     removeItem(event){
         unmountComponentAtNode(document.getElementById('todoItem'));
     }
     
     render() {
-        const todos = this.props.todos.map((todo)=> (
+        const todos = this.props.todos.filter(todo => todo.done == true).map((todo)=> (
             <TodoItemContainer key={todo.id} todo={todo} />
         ))
         return (
             <div>
-                <ul class = "todoGroup">
+                <ul>
                   {todos}
                 </ul>
             </div>
@@ -24,4 +24,4 @@ class TodoGroup extends Component {
     }
 }        
 
-export default TodoGroup;
+export default TodoDoneGroup;

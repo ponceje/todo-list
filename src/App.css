@@ -68,9 +68,10 @@ ul li {
 ul li:hover {
   background-color: #eee;
 }
-ul li.checked{
+ul.todoGroup li.checked{
   text-decoration: line-through;
 }
+
 .close {
   cursor: pointer;
   position: absolute;
