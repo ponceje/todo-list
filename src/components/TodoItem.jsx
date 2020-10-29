@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { removeFromList } from '../apis/todos';
 import { updateTodos } from '../apis/todos';
-
+import happy from '../happy.mp3';
 
 class TodoItem extends Component {
 
 markList = (event) => {
+    const doThat = new Audio(happy);
+    doThat.play();
     event.target.classList.toggle('checked');
     updateTodos(this.props.todo).then(response=>{
         this.props.updateTodos(response.data.id);
