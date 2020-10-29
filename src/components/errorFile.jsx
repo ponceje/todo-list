@@ -7,7 +7,7 @@ class errorFile extends Component {
         return (
             <div>
                 <img src={Logo}  className="img-responsive" height="1000px"/>
-                    <span>Hello {this.props.name}</span>
+                    <span>{this.props.name}</span>
             </div>
         );
     }
