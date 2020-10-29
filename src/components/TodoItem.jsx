@@ -24,8 +24,13 @@ removeItem = (todoid) => {
     render() {
         return (
             <div id={this.props.todo.id}> 
+<<<<<<< HEAD
                 <li onClick={this.markList}  class={this.props.todo.done == true ? "checked" : "unchecked"}>
                  {this.props.todo.todoText}
+=======
+                <li onClick={this.markList}  class={this.props.todo.done === true ? "checked" : "unchecked"}>
+                 {this.props.todo.text}
+>>>>>>> c839ca4921fe3325859e30ac6a3f89c779de6f29
                     <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
                 </li>
             </div>

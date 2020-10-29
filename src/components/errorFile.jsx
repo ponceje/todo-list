@@ -6,7 +6,7 @@ class errorFile extends Component {
     render() {
         return (
             <div>
-                <img src={Logo}  className="img-responsive" height="1000px"/>
+                <img src={Logo}  className="img-responsive" height="1000px" alt="it is 404"/>
                     <span>{this.props.name}</span>
             </div>
         );
