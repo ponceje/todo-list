@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Logo from '../eror.png';
+
 
 class errorFile extends Component {
     render() {
         return (
             <div>
-                404 not found
+                <img src={Logo}  className="img-responsive" height="1000px"/>
+                    <span>Hello {this.props.name}</span>
             </div>
         );
     }
