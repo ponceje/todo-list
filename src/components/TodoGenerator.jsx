@@ -1,10 +1,9 @@
 import 'antd/dist/antd.css'
 import React, { Component } from 'react';
-import { v4 as uuidv4} from 'uuid';
 import swordSound from '../sword-sound.mp3';
 import heyhey from '../heyhey.mp3';
 import { addTodos } from '../apis/todos';
-import { Button,Tooltip } from 'antd';
+import { Button} from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 const beep = new Audio(swordSound);
     const heya = new Audio(heyhey);

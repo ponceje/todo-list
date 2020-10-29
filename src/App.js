@@ -1,6 +1,6 @@
 import './App.css';
 import TodoList from './components/TodoList';
-import {HashRouter, BrowserRouter, Route, Link, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Link, Switch} from 'react-router-dom';
 import TodoGroupContainer from './containers/TodoGroupContainer';
 import TodoDoneGroupContainer from './containers/TodoDoneGroupContainer';
 import {connect} from 'react-redux' ;
