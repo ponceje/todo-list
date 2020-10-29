@@ -17,7 +17,7 @@ markList = (event) => {
     const doThat = new Audio(happy);
     doThat.play();
     event.target.classList.toggle('checked');
-    if(this.state.delete){
+    if(!this.state.delete){
     updateTodos(this.props.todo).then(response=>{
         this.props.updateTodos(response.data.id);
     })
@@ -32,16 +32,16 @@ removeItem = (todoid) => {
     })
 }
 
-    render() {
-        return (
-            <div id={this.props.todo.id}> 
-                <li onClick={this.markList}  class={this.props.todo.done === true ? "checked" : "unchecked"}>
-                 {this.props.todo.text}
-                    <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
-                </li>
-            </div>
-        );
-    }
+render() {
+    return (
+        <div id={this.props.todo.id}> 
+            <li onClick={this.markList}  class={this.props.todo.done == true ? "checked" : "unchecked"}>
+             {this.props.todo.todoText}
+                <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
+            </li>
+        </div>
+    );
+}
 }
 
 export default TodoItem;
