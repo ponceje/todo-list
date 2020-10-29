@@ -11,15 +11,13 @@ markList = (event) => {
     event.target.classList.toggle('checked');
     updateTodos(this.props.todo).then(response=>{
         this.props.updateTodos(response.data.id);
-        
-
     })
 
 
 }
 removeItem = (todoid) => {
     removeFromList(todoid).then(response=>{
-        this.props.removeFromList(response.data.id);
+        this.props.removeFromList(todoid);
     })
 }
 
@@ -27,7 +25,7 @@ removeItem = (todoid) => {
         return (
             <div id={this.props.todo.id}> 
                 <li onClick={this.markList}  class={this.props.todo.done == true ? "checked" : "unchecked"}>
-                 {this.props.todo.text}
+                 {this.props.todo.todoText}
                     <span class="close" onClick={()=> this.removeItem(this.props.todo.id)}>&times;</span>
                 </li>
             </div>

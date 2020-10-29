@@ -14,7 +14,7 @@ class TodoGenerator extends Component {
 constructor(props) {
     super(props);
     this.state={
-        text:''
+        todoText:''
     }
     
 }
