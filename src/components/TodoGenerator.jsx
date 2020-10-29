@@ -6,7 +6,9 @@ import heyhey from '../heyhey.mp3';
 import { addTodos } from '../apis/todos';
 import { Button,Tooltip } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
-
+const beep = new Audio(swordSound);
+    const heya = new Audio(heyhey);
+    
 class TodoGenerator extends Component {
     
 constructor(props) {
@@ -14,13 +16,14 @@ constructor(props) {
     this.state={
         text:''
     }
+    
 }
 
 onSubmit=(event)=>{
-    const beep = new Audio(swordSound);
-    const heya = new Audio(heyhey);
+    
     event.preventDefault();
     beep.play();
+    heya.pause();
     addTodos(event.target.todoText.value).then(response=>{
         if(response.data.text === "cloud"){heya.play();}
         this.props.addTodos(response.data);
